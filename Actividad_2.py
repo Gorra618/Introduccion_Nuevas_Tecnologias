@@ -1,14 +1,18 @@
-n = 1
-
 def es_primo(n):
-    if n <= 2:
-        return True
-    for i in range(2, n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
         if n % i == 0:
-            return True
-    return False
+            return False
+    return True
 
-if es_primo(n):
-    for i in
-else:
-    print("No es un primo, no se hace realiza la operación")
+def n_primo(n):
+    contador = 0
+    numero = 1
+    while contador < n:
+        numero += 1
+        if es_primo(numero):
+            contador += 1
+    return numero
+
+print(n_primo(6))  
